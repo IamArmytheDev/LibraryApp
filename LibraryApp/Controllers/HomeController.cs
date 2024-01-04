@@ -17,11 +17,5 @@ namespace LibraryApp.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
     }
 }

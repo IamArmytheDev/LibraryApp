@@ -59,7 +59,7 @@ namespace LibraryApp.Areas.Management.Controllers
 				}
 
 				editModel.Name = model.Name;
-				editModel.Title = model.Title;
+				editModel.Description = model.Description;
 				db.SaveChanges();
 				return Redirect("/Management/Category/Index");
 

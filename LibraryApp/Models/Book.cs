@@ -1,17 +1,38 @@
-﻿namespace LibraryApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LibraryApp.Models
 {
-    public class Book
-    {
-        public int Id { get; set; }
+	public class Book
+	{
+		[Key]
+		public int Id { get; set; }
 
-        public string Name { get; set; }
+		[Required]
+		public int CategoryId { get; set; }
+		[ForeignKey("CategoryId")]
+		public Category? Category { get; set; }
 
-        public string Description { get; set; }
+		[Required]
+		public int AuthorId { get; set; }
+		[ForeignKey("AuthorId")]
+		public Author? Author { get; set; }
 
-        public string Subject { get; set; }
 
-        public string Author { get; set; }
+		[Required, StringLength(32)]
+		public string Name { get; set; }
+		[Required, StringLength(256)]
+		public string Brief { get; set; }
+		[Required]
+		public int PageCount { get; set; }
+		[Required, StringLength(32)]
+		public string Barcode { get; set; }
+		[Required]
+		public DateTime PublishDate { get; set; }
+		[Required]
+		public bool Status { get; set; }
+		public DateTime CreatedDate { get; set; }
+		public virtual ICollection<Favourite> Favourites { get; set; }
 
-        public bool Status { get; set; }
-    }
+	}
 }

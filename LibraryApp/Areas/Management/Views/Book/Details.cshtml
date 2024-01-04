@@ -5,7 +5,9 @@
 	<div class="card-body">
 		<h5 class="card-title">@Model.Name</h5>
 		<h6 class="card-subtitle mb-2">@Model.Author</h6>
-		<h6 class="card-subtitle mb-2">@Model.Subject</h6>
-		<p class="text-justify">@Html.Raw(Model.Description)</p>
+		<h6 class="card-subtitle mb-2">@Model.Category</h6>
+		<h6 class="card-subtitle mb-2">@Model.Barcode</h6>
+		<h6 class="card-subtitle mb-2">@Model.PageCount</h6>
+		<p class="text-justify">@Html.Raw(Model.Brief)</p>
 	</div>
 </div>

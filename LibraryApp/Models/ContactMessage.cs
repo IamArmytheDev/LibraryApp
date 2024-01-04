@@ -28,8 +28,6 @@ namespace LibraryApp.Models
         [Required(ErrorMessage = "Mesaj alanını doldurun")]
         [StringLength(256, ErrorMessage = "Mesaj alanı en fazla 256 karakter içermeli.")]
         [MinLength(10, ErrorMessage = "Mesaj alanı en az 10 karakter içermeli.")]
-        public string Description { get; set; }
-
         public string Details { get; set; }
         public bool? Status { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -38,5 +36,4 @@ namespace LibraryApp.Models
 
 		public string? Reply { get; set; }
 	}
-}
 }

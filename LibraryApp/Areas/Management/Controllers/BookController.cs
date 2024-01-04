@@ -62,9 +62,9 @@ namespace LibraryApp.Areas.Management.Controllers
                 }
 
                 editModel.Name = model.Name;
-                editModel.Subject = model.Subject;
+                editModel.Barcode = model.Barcode;
                 editModel.Author = model.Author;
-                editModel.Description = model.Description;
+                editModel.Brief = model.Brief;
                 db.SaveChanges();
                 return Redirect("/Management/Book/Index");
 
